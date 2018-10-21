@@ -10,6 +10,7 @@ Array.prototype.injectFirstPosition = function(element)
 let someValues = [2,4,6,8,10,12];
 someValues.injectFirstPosition(0);
 console.log(someValues);
+
 //------------------------------------------------
 //In production use: 
 someValues.unshift(0);
