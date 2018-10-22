@@ -83,3 +83,80 @@ for (const n of iterator) {
     console.log(n);
 }
 //when the array is iterated and there are no more values the iterator.next() will return undefined.
+
+//--Entries, Keys, and Values
+//--entries
+//returns @@iterator which contain key/value pairs
+let aEntries = numbers.entries(); //retrive iterator of key/value pair
+console.log(aEntries.next().value); //[0,1] - pos 0, value 1
+console.log(aEntries.next().value); //[1,2] - pos 1, value 2
+console.log(aEntries.next().value); //[2,3] - pos 2, value 3
+//the number array only contains numbers, so key will be the pos of the array and value will be the value stored in the array index.
+//alternatively:
+aEntries = numbers.entries();
+for (const n of aEntries) {
+    console.log(n);
+}
+
+//--keys
+//returns @@iterator which contains the keys of the array
+const aKeys = numbers.keys(); //retrieve iterator of keys
+console.log(akeys.next()); //{value: 0, done: false}
+console.log(akeys.next()); //{value: 1, done: false}
+console.log(akeys.next()); //{value: 2, done: false}
+//for the numbers array, the keys will be the indexes of the array. Once there are no more values to be iterated aKeys.next() will return undefined as value and done as true. 
+
+//--values
+//returns @@iterator which contains the value of the array
+const aValues = numbers.values();
+console.log(aValues.next()); //{value: 1, done: false}
+console.log(aValues.next()); //{value: 2, done: false}
+console.log(aValues.next()); //{value: 3, done: false}
+
+//--from
+//creates a new array from an existing one. A copy.
+let numbers2 = Array.from(numbers);
+//we can also pass a function to determine which values we want to map
+let evens = Array.from(numbers, x => (x % 2 == 0));
+
+//--Array.of
+//creates a new array from the args passed in.
+let numbers3 = Array.of(1);
+let numbers4 = Array.of(1,2,3,4,5,6);
+//the above is equivalent to
+let numbers3 = [1];
+let numbers4 = [1,2,3,4,5,6];
+//we can also use Array.of to make a copy of an existing array
+let numbersCopy = Array.of(...numbers4);
+
+//--fill
+//fills the array with a value.
+let numbersCopy = Array.of(1,2,3,4,5,6);
+//fill the entire array with 0's
+numbersCopy.fill(0);
+//using a start index
+numbersCopy.fill(2,1); //start at index 1 and fill the rest with 2's
+//using a start and end index
+numbersCopy.fill(1,3,5); //fill with 1's from index 3 to index 5
+//useful for creating an array and intializing it's values
+let ones = Array(6).fill(1); //creates an array of length 6 with it's values set to 1's
+
+//--copyWithin
+//copies a sequnce of values of the array into the position of a start index
+let copyArray = [1,2,3,4,5,6];
+copyArray.copyWithin(0,3); // copies the values 4,5,6 to the first three positions of the array [4,5,6,4,5,6]
+//if say, we wanted to copy the values 4 and 5 (pos 3 and 4) to pos 1 and 2
+copyArray.copyWithin(1,3,5); //copy the elements starting in pos 3 ending in pos 5 to position 1 - [1,4,5,6,4,5,6]
+
+
+
+
+
+
+
+
+
+
+
+
+
