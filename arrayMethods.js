@@ -186,8 +186,43 @@ names.sort((a,b)=> {
 names.sort((a,b)=>a.localeCompare(b)); //result ana Ana john John -- works the same with accented characters
 
 
+//Searching
+//--IndexOf
+//returns the index of the first element that matches the arguement passesd or -1 if it doesn't find anything
+console.log(numbersCopy.indexOf(10));
+console.log(numbersCopy.indexOf(100));
+//--LastIndexOf
+//returns the index of the last element that matches the arguement passesd or -1 if it doesn't find anything
+console.log(numbersCopy.lastIndexOf(10));
+console.log(numbersCopy.lastIndexOf(100));
 
+//ECMAScript 2015 
+//--find and findIndex
+//both methods receive a callback function that searches for a value which satisfies the condtion presented in the testing callback function. 
+//the difference between find and findIndex is that find returns the first value of the array that satisfies the condtion; findIndex returns the index of the first value of the array that satisfies the condition. If the value is not found it returns undefined. 
+//Example: test for array numbers that contain any multiple of 13.
+let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+function multipleOf13(element, index, array) {
+    return (element % 13 == 0);
+}
+numbers.find(multipleOf13);
+numbers.findIndex(multipleOf13);
 
+//ECMAScript 2016
+//--includes
+//returns true if an element is found in the array and false otherwise.
+numbers.includes(15);
+//it's possible to pass a string index when you want the array to start searching
+let numbers2 = [7,6,5,4,3,2,1];
+numbers2.includes(4,5); //false because 4 doesn't exist after pos 5
+
+//--toString
+//if you want to output all elements of the array to a single string use toString
+numbers.toString();
+
+//--join
+//if you want to seperate elements by a different seperator like '-' use the join method.
+numbers.join('-')
 
 
 
