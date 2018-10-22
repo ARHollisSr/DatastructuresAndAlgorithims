@@ -225,5 +225,9 @@ numbers.toString();
 numbers.join('-')
 
 
+//TYPESCRIPT
+//the only difference with typescript for arrays is checking at compile time to ensure we are only manipulating arrays in which all values have the same datatype.
+
+
 
 
