@@ -148,10 +148,42 @@ copyArray.copyWithin(0,3); // copies the values 4,5,6 to the first three positio
 //if say, we wanted to copy the values 4 and 5 (pos 3 and 4) to pos 1 and 2
 copyArray.copyWithin(1,3,5); //copy the elements starting in pos 3 ending in pos 5 to position 1 - [1,4,5,6,4,5,6]
 
+//--sort
+//note that with the sort method Javascript sorts the elements lexicographically due to assuming all elements are strings. Therefore you can write your own comparison function.
+numbersCopy.sort((a,b)=>a - b); //returns a negative number if b is bigger than a. A positive number if a is bigger than b and ZERO if they are equal.
 
+//--custom sorting
+//arrays of any type object can be sorted and you can create a compareFunction to compare each element as required.
+const friends = [
+    { name: 'dave', age: 16 },
+    { name: 'anna', age: 15 },
+    { name: 'paul', age: 17 },
+];
+function comparePerson(a, b) {
+    if (a.age < b.age) {
+        return -1;
+    }
+    if (a.age > b.age) {
+        return 1;
+    }
+    return 0;
+}
 
-
-
+//--sort strings
+let names = ['Ana', 'ana', 'john','John'];
+names.sort(); //result: Ana John ana john - because of the ASCII values
+//to resolve this create a compare function that ignores case and takes over for the sort function
+names.sort((a,b)=> {
+    if (a.toLowerCase() < b.toLowerCase()) {
+        return -1;
+    }
+    if (a.toLowerCase() > b.toLowerCase()) {
+        return 1;
+    }
+    return;
+});
+//if you want lowercase letters to come first in a sorted array use the localCompare method
+names.sort((a,b)=>a.localeCompare(b)); //result ana Ana john John -- works the same with accented characters
 
 
 
