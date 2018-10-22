@@ -23,7 +23,7 @@ values.splice(5,3); //remove three elements starting fron index 5
 
 //--splice (inserting)
 //if wanted to insert the values 2 - 4 back into the array starting from pos 5
-values.splice(5,0,2,3,4); //arg is index we want to remove elements from or insert into, second argument is number of elements we want to remove, in the this case we pass 0. From the third arg onward we have the values we want to insert.
+values.splice(5,0,2,3,4); //args: index we want to remove elements from or insert into, second argument is number of elements we want to remove, in the this case we pass 0. From the third arg onward we have the values we want to insert.
 
 //--concat
 const zero = 0;
