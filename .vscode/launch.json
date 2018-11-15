@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/\\FindLongestWordInAString.js"
+            "program": "${workspaceFolder}/\\ReturnLargestNumberInNestedArrays.js"
         }
     ]
 }
