@@ -9,7 +9,11 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+<<<<<<< HEAD
             "program": "${workspaceFolder}/\\FindLongestWordInAString.js"
+=======
+            "program": "${workspaceFolder}/\\ConfirmTheEnding.js"
+>>>>>>> 8cc1338f70aa5f4c16bbd3a54ed671dbc310e18c
         }
     ]
 }
