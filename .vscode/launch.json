@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/\\TruncateAString.js"
+            "program": "${workspaceFolder}/\\FindersKeepers.js"
         }
     ]
 }
