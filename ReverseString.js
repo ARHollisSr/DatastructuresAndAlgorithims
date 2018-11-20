@@ -11,4 +11,3 @@ function reverseString(str) {
   }
   
   console.log(reverseString('hello'));
-  console.log(reverseString2('hello2'));
