@@ -12,9 +12,10 @@ function mutation(arr) {
 
 function mutatio2(arr) {
   return arr[1].toLowerCase().split('').every(function(letter) {
-      
+
     return arr[0].toLowerCase().indexOf(letter) != -1;
   });
 }
+
 
 console.log(mutation(['hello', 'hey']));
