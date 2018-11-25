@@ -17,5 +17,4 @@ function mutatio2(arr) {
   });
 }
 
-
 console.log(mutation(['hello', 'hey']));
